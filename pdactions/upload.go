@@ -51,8 +51,8 @@ func (fup *FileUploader) UploadFile(uri string) (id string, err error) {
 	w.Close()
 
 	// Testing or live version, pick your poison
-	req, err := http.NewRequest("POST", "http://213.73.138.240:8080/api/upload", &b)
-	//req, err := http.NewRequest("POST", "http://pixeldrain.com/api/upload", &b)
+	//req, err := http.NewRequest("POST", "http://127.0.0.1:8080/api/upload", &b)
+	req, err := http.NewRequest("POST", "http://pixeldrain.com/api/upload", &b)
 	if err != nil {
 		fmt.Println("Could not make request")
 		return "", err
