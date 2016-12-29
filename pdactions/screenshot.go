@@ -17,7 +17,7 @@ func GrabScreen() (path string, err error) {
 
 	t := time.Now()
 
-	fname := t.Format("2006-01-02-15-04-05")
+	fname := t.Format("2006-01-02-15-04-05") // Year-Month-Day-Hour-Minute-Second
 	fpath := os.TempDir() + "/pd-" + fname + ".png"
 
 	fmt.Println("Screenshot saved as: " + fpath)
